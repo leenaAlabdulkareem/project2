@@ -12,9 +12,21 @@ fetch(req)
     .then(function(response) {
         console.log(response.json());
     }).then(function(res){
-      console.log(res)
+      console.log(data.res)
     })
 
+
+$.get('https://newsapi.org/v2/top-headlines?' +
+'sources=bbc-news&' +
+    'apiKey=61078bf91b0b4f99b2bac9d769340140', function(data){
+  console.log(res);
+
+  $.post('https://newsapi.org/v2/top-headlines?' +
+'sources=bbc-news&' +
+    'apiKey=61078bf91b0b4f99b2bac9d769340140', {/** data */}, function(data){
+  console.log(top-headlines);
+  
+})
     $('#popup').on('click',function(){
       $("#popUp").removeClass("hidden").removeClass("loader")
       $("article").hide();
