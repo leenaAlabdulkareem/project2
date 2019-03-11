@@ -11,6 +11,8 @@ var req = new Request(url1);
 fetch(req)
     .then(function(response) {
         console.log(response.json());
+    }).then(function(res){
+      console.log(res)
     })
 
     $('#popup').on('click',function(){
